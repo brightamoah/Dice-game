@@ -30,6 +30,8 @@ document.querySelector(".check").addEventListener("click", function () {
     }
     else if (guess === secretNumber) {
         document.querySelector(".message").textContent = "🎉 Correct Number!"
+
+        document.querySelector("body").style.backgroundColor = "#60b347";
     }
     else if (guess > secretNumber) {
 
@@ -42,7 +44,7 @@ document.querySelector(".check").addEventListener("click", function () {
             document.querySelector(".message").textContent = "😭 You Loose!!";
         }
 
-        const highScore = document.querySelector(".label.highscore").textContent = score;
+        // const highScore = document.querySelector(".label.highscore").textContent = score;
     }
     else if (guess < secretNumber) {
         if (score > 1) {
